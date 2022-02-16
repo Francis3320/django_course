@@ -1,0 +1,12 @@
+{% extends 'global.html' %}
+
+{% block content %}
+
+<h1>This is a simple signup page testing</h1>
+ <form class="site-form" action="/accounts/signup/" method="post">
+ {% csrf_token %}
+ {{form}}
+ <button type="submit">Sign up</button>
+</form>
+
+{% endblock %}

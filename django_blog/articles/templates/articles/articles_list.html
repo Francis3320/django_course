@@ -1,0 +1,16 @@
+
+   {% extends 'global.html'%}
+
+   {% block content %}
+    <p>This is an article page</p>
+    <div class="articles">
+        {% for article in articles %}
+    <div class="article">
+         <h1><a href="{% url 'articles:detail' slug=article.slug %}">{{article.title}}</a></h1>
+        <h1><a href="#">{{article.title}}</a></h1>
+        <p>{{article.snippet}}</p>
+        <p>{{article.date}}</p>
+    </div>
+        {%endfor%}
+    </div>
+    {% endblock %}
